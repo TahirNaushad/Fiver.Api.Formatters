@@ -65,6 +65,47 @@
 				"description": ""
 			},
 			"response": []
+		},
+		{
+			"name": "http://localhost:20677/movies?format=json",
+			"request": {
+				"url": {
+					"raw": "http://localhost:20677/movies?format=xml",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "20677",
+					"path": [
+						"movies"
+					],
+					"query": [
+						{
+							"key": "format",
+							"value": "xml",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:20677/movies.xml",
+			"request": {
+				"url": "http://localhost:20677/movies.xml",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
 		}
 	]
 }
