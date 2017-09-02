@@ -19,6 +19,8 @@ namespace Fiver.Api.Formatters
                 options.OutputFormatters.RemoveType<HttpNoContentOutputFormatter>();
                 options.InputFormatters.Add(new XmlSerializerInputFormatter());
                 options.OutputFormatters.Add(new XmlSerializerOutputFormatter());
+
+                options.FormatterMappings.SetMediaTypeMappingForFormat("xml", "application/xml");
             });
         }
 
@@ -26,6 +28,7 @@ namespace Fiver.Api.Formatters
             IApplicationBuilder app,
             IHostingEnvironment env)
         {
+            app.UseDeveloperExceptionPage();
             app.UseMvcWithDefaultRoute();
         }
     }

@@ -17,7 +17,8 @@ namespace Fiver.Api.Formatters.Controllers
             this.service = service;
         }
 
-        [HttpGet]
+        [HttpGet()]
+        [HttpGet("/movies.{format}"), FormatFilter]
         public IActionResult Get()
         {
             var model = service.GetMovies();
